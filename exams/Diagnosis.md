@@ -1,8 +1,8 @@
 # Evaluación de Redes y Sistemas Operativos
 
-| Nombre: | Fecha: | Matrícula: |
-|---------|--------|------------|
-|         |        |            |
+|         Nombre:          | Fecha: | Matrícula: |
+|Luz Arleth López Bautista |22-08-24|  21620036  |
+|                          |        |            |
 
 ## Instrucciones
 
@@ -13,10 +13,10 @@ Responde las siguientes preguntas de manera clara y concisa. Cada sección tiene
 Pregunta de Opción Múltiple:<br>
 Identifica cuáles de los siguientes elementos son componentes fundamentales de un sistema de red:<br>
 
-- [ ] Switch
-- [ ] Router
+- [x ] Switch
+- [x ] Router
 - [ ] Monitor
-- [ ] Cableado
+- [x ] Cableado
 - [ ] CPU
 - [ ] Firewall
 
@@ -29,10 +29,10 @@ Relaciona los siguientes componentes de una red con su función principal:<br>
 
 | Componente                      | Función principal |
 |---------------------------------|-------------------|
-| [ ] Servidor                    | A) Protege la red de accesos no autorizados. |
-| [ ] Firewall                    | B) Facilita la conectividad inalámbrica. |
-| [ ] Punto de acceso inalámbrico | C) Transmite datos entre dispositivos de la red. |
-| [ ] Cable de par trenzado       | D) Proporciona recursos a los usuarios de la red. |
+| [d] Servidor                    | A) Protege la red de accesos no autorizados. |
+| [a] Firewall                    | B) Facilita la conectividad inalámbrica. |
+| [c] Punto de acceso inalámbrico | C) Transmite datos entre dispositivos de la red. |
+| [b] Cable de par trenzado       | D) Proporciona recursos a los usuarios de la red. |
 
 ## Sección 2: Protocolo de Conexión TCP/IP (20%)
 
@@ -40,11 +40,11 @@ Pregunta Verdadero/Falso:<br>
 TCP/IP es un protocolo que se utiliza exclusivamente para redes privadas, como las LANs.
 
 - [ ] Verdadero
-- [ ] Falso
+- [x] Falso
 
 Justifique su respuesta.<br>
 ___Respuesta___
-
+funcionan para distintas redes ya que se encargan de que la informacion o los datos lleguen a su destino
 Pregunta Abierta:<br>
 Describe las diferencias clave entre TCP y UDP en términos de fiabilidad y uso.<br>
 
@@ -65,7 +65,7 @@ Pregunta de Selección Múltiple:<br>
 Pregunta de Desarrollo:<br>
 Explica la importancia de seguir normas y estándares de la industria al diseñar redes en una organización. Proporcione ejemplos de dos normas específicas.<br>
 ___Respuesta___
-
+Facilitan las interconexiones y acceso a los equipos, a las redes, etc.
 Pregunta de Análisis de Caso:<br>
 Una empresa está planeando la expansión de su red. Describe cómo aplicarías las normas y estándares de la industria para garantizar la compatibilidad y el rendimiento.<br>
 ___Respuesta___
@@ -84,7 +84,7 @@ Pregunta de Opción Múltiple:<br>
 ¿Cuál de los siguientes sistemas operativos es conocido por su estabilidad y seguridad en entornos de red?<br>
 
 - [ ] Windows Server
-- [ ] macOS
+- [x ] macOS
 - [ ] Linux
 - [ ] Android
 
@@ -113,7 +113,7 @@ ___Respuesta___
 Pregunta de Opción Múltiple:<br>
 ¿Cuál de las siguientes medidas es más efectiva para proteger una red de accesos no autorizados?<br>
 
-- [ ] Cortafuegos
+- [x ] Cortafuegos
 - [ ] Antivirus
 - [ ] Actualizaciones de software
 - [ ] Contraseñas seguras
@@ -123,13 +123,14 @@ Seleccione la respuesta correcta.
 Pregunta de Desarrollo:<br>
 Explica la importancia de implementar medidas de seguridad en una red y cómo estas pueden proteger la información confidencial de una organización.<br>
 ___Respuesta___
-
+al implementar medidas de seguridad en la red nos ayuda a proteger nuestra informacion confidencial ya que asi de esta manera mantenemos los datos seguros, asi como tambien nos protegemos de los virus que pueden haber en la red.
 ## Sección 8: Resolución de Problemas en Redes (10%)
 
 Pregunta de Caso Práctico:<br>
 Un usuario informa que no puede acceder a Internet desde su computadora. Describe los pasos que seguirías para identificar y resolver el problema.<br>
 ___Respuesta___
-
+desconectamos el modem de la fuente de alimentación, volvemos a enchufarlo despues de medio minuto.
 Pregunta de Desarrollo:<br>
 Explica la importancia de tener habilidades para la resolución de problemas en redes y cómo estas pueden impactar en la eficiencia y productividad de una organización.<br>
 ___Respuesta___
+La importancia es que conocen distintas herramientas para solucionar un problema, y al mismo tiempo se pueden anticipar de los posibles problemas que vayan a surgir a futuro, lo que hace que se puedan evitar o que antes de ocurrir se puedan prevenir y corregir. 

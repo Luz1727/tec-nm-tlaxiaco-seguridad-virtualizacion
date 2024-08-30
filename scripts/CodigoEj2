@@ -1,0 +1,81 @@
+import java.util.Random;
+
+public class GeneradorContraseña {
+    
+    public static void main(String[] args) {
+        String contraseña;
+        do {
+            contraseña = generarContraseña();
+        } while (!esSegura(contraseña));
+        
+        System.out.println("Contraseña generada: " + contraseña);
+        System.out.println("La contraseña es segura.");
+    }
+
+    
+    public static String generarContraseña() {
+        String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String minusculas = "abcdefghijklmnopqrstuvwxyz";
+        String numeros = "0123456789";
+        String caracteresEspeciales = "!@#$%^&*()-_=+[]{}|;:',.<>/?~`";
+        String todosCaracteres = mayusculas + minusculas + numeros + caracteresEspeciales;
+        
+        Random random = new Random();
+        StringBuilder contraseña = new StringBuilder();
+        
+       
+        contraseña.append(mayusculas.charAt(random.nextInt(mayusculas.length())));
+        contraseña.append(minusculas.charAt(random.nextInt(minusculas.length())));
+        contraseña.append(numeros.charAt(random.nextInt(numeros.length())));
+        contraseña.append(caracteresEspeciales.charAt(random.nextInt(caracteresEspeciales.length())));
+        
+        for (int i = 4; i < 12; i++) {
+            contraseña.append(todosCaracteres.charAt(random.nextInt(todosCaracteres.length())));
+        }
+        
+        return contraseña.toString();
+    }
+
+    
+    public static boolean esSegura(String contraseña) {
+        if (contraseña.length() < 8) {
+            return false;
+        }
+        
+        boolean tieneMayuscula = false;
+        boolean tieneMinuscula = false;
+        boolean tieneNumero = false;
+        boolean tieneEspecial = false;
+
+        char ultimoCaracter = '\0'; 
+        int contadorConsecutivos = 1;
+
+        for (int i = 0; i < contraseña.length(); i++) {
+            char c = contraseña.charAt(i);
+            
+            if (Character.isUpperCase(c)) {
+                tieneMayuscula = true;
+            } else if (Character.isLowerCase(c)) {
+                tieneMinuscula = true;
+            } else if (Character.isDigit(c)) {
+                tieneNumero = true;
+            } else if ("!@#$%^&*()-_=+[]{}|;:',.<>/?~`".indexOf(c) != -1) {
+                tieneEspecial = true;
+            }
+
+            
+            if (c == ultimoCaracter) {
+                contadorConsecutivos++;
+                if (contadorConsecutivos > 2) {
+                    return false;
+                }
+            } else {
+                contadorConsecutivos = 1; 
+            }
+            
+            ultimoCaracter = c; 
+        }
+        
+        return tieneMayuscula && tieneMinuscula && tieneNumero && tieneEspecial;
+    }
+}

@@ -1,0 +1,27 @@
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+import ssl
+import os
+
+# Rutas a los archivos de certificado y clave
+certfile = 'myserver.crt'
+keyfile = 'myserver.key'
+
+# Verificar si los archivos existen
+if not os.path.isfile(certfile):
+    raise FileNotFoundError(f"Certificado no encontrado: {certfile}")
+if not os.path.isfile(keyfile):
+    raise FileNotFoundError(f"Clave no encontrada: {keyfile}")
+
+# Configuración del servidor
+server_address = ('localhost', 4443)
+httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)
+
+# Crear el contexto SSL
+context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+context.load_cert_chain(certfile=certfile, keyfile=keyfile)
+
+# Envolver el socket del servidor en el contexto SSL
+httpd.socket = context.wrap_socket(httpd.socket, server_side=True)
+
+print("Servidor HTTPS corriendo en https://localhost:4443")
+httpd.serve_forever()

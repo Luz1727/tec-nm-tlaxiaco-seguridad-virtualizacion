@@ -1,0 +1,55 @@
+//Ejercicio1
+
+package programcontraseña;
+
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class ProgramContraseña {
+
+    public static boolean ContrasenaSegura(String contrasena) {
+        if (contrasena.length() < 8) {
+            System.out.println("La contraseña debe tener al menos 8 caracteres");
+            return false;
+        }
+        if (contrasena.contains(" ")) {
+            System.out.println("La contraseña no debe contener espacios vacios");
+            return false;
+        }
+        if (!Pattern.compile("[A-Z]").matcher(contrasena).find()) {
+            System.out.println("La contraseña debe tener al menos una letra mayuscula");
+            return false;
+        }
+        if (!Pattern.compile("(.)\\1\\1").matcher(contrasena).find()) {
+            System.out.println("La contraseña no debe de tener mas de dos caracteres consecutivos");
+            return false;
+        }
+        if (!Pattern.compile("[a-z]").matcher(contrasena).find()) {
+            System.out.println("La contraseña debe tener al menos una letra minuscula");
+            return false;
+        }
+        if (!Pattern.compile("[0-9]").matcher(contrasena).find()) {
+            System.out.println("La contraseña debe tener al menos un numero");
+            return false;
+        }
+        if (!Pattern.compile("[!@#$%^&*()_+=\\[\\]{}|;:'\",.<>/?~`]").matcher(contrasena).find()) {
+            System.out.println("La contraseña debe tener al menos un caracter especial");
+            return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa una contraseña para validar");
+        String contrasena = scanner.nextLine();
+        System.out.println();
+        if (ContrasenaSegura(contrasena)) {
+            System.out.println("La contraseña es segura:contraseña valida");
+        } else {
+            System.out.println("La contraseña no es segura");
+        }
+    }
+
+}
+

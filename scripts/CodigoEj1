@@ -20,8 +20,8 @@ public class ProgramContraseña {
             System.out.println("La contraseña debe tener al menos una letra mayuscula");
             return false;
         }
-        if (!Pattern.compile("(.)\\1\\1").matcher(contrasena).find()) {
-            System.out.println("La contraseña no debe de tener mas de dos caracteres consecutivos");
+        if (Pattern.compile("(.)\\1{2,}").matcher(contrasena).find()) {
+            System.out.println("La contraseña no debe de tener más de dos caracteres consecutivos iguales");
             return false;
         }
         if (!Pattern.compile("[a-z]").matcher(contrasena).find()) {
@@ -32,10 +32,12 @@ public class ProgramContraseña {
             System.out.println("La contraseña debe tener al menos un numero");
             return false;
         }
-        if (!Pattern.compile("[!@#$%^&*()_+=\\[\\]{}|;:'\",.<>/?~`]").matcher(contrasena).find()) {
+        String specialChars = "[!@#$%^&*()_+=\\[\\]{};':\"\\\\|,.<>/?`~]";
+        if (!Pattern.compile(specialChars).matcher(contrasena).find()) {
             System.out.println("La contraseña debe tener al menos un caracter especial");
             return false;
         }
+
         return true;
     }
 
@@ -45,11 +47,10 @@ public class ProgramContraseña {
         String contrasena = scanner.nextLine();
         System.out.println();
         if (ContrasenaSegura(contrasena)) {
-            System.out.println("La contraseña es segura:contraseña valida");
+            System.out.println("La contraseña es segura: contraseña válida");
         } else {
             System.out.println("La contraseña no es segura");
         }
     }
-
 }
 

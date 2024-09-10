@@ -1,0 +1,53 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2C3E50;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ECF0F1;
+}
+
+/* Admin container styling */
+.admin-container {
+    background-color: #34495E;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+/* Admin header */
+h2 {
+    font-size: 28px;
+    color: #E74C3C;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 18px;
+    color: #ECF0F1;
+}
+
+/* Button for admin actions */
+button {
+    background-color: #E74C3C;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effects */
+button:hover {
+    background-color: #C0392B;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Administración</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="admin-contenedor">
+        <h2>Panel de Administración</h2>
+        <p>¡Bienvenido, administrador!</p>
+        <button>Gestionar Usuarios</button>
+
+        <!-- Botón para cerrar sesión -->
+        <form action="/logout" method="POST">
+            <button type="submit">Cerrar Sesión</button>
+        </form>
+    </div>
+    <script>
+        let inactivityTime = function () {
+            let time;
+            const logoutUrl = '/login'; // URL para el cierre de sesión
+
+            // Función para manejar el cierre de sesión
+            const handleLogout = () => {
+                window.location.href = logoutUrl;
+            };
+
+            // Función para reiniciar el temporizador
+            const resetTimer = () => {
+                clearTimeout(time);
+                time = setTimeout(handleLogout, 5* 60 * 1000); // 5 minutos en milisegundos
+            };
+
+            // Monitorear eventos de actividad del usuario
+            window.onload = resetTimer;
+            document.onmousemove = resetTimer;
+            document.onkeypress = resetTimer;
+            document.ontouchstart = resetTimer; // En dispositivos táctiles
+            document.onclick = resetTimer;
+        };
+
+        inactivityTime();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

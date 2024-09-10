@@ -1,0 +1,87 @@
+/* style.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2b2d42, #8d99ae); /* Degradado oscuro a gris claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #f1f1f1; /* Color de texto claro para contraste */
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f; /* Fondo oscuro */
+    z-index: -1;
+}
+
+.formulario-contenedor {
+    background-color: #1f1f1f; /* Fondo oscuro para el formulario */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h2 {
+    color: #e9ecef; /* Color del texto del encabezado */
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #444; /* Borde gris oscuro */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #333; /* Fondo gris oscuro para campos de entrada */
+    color: #f1f1f1; /* Texto claro en campos de entrada */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4a90e2; /* Borde azul claro al enfocar */
+    outline: none;
+}
+
+button {
+    background-color: #4a90e2; /* Fondo azul claro del botón */
+    color: #ffffff; /* Texto blanco del botón */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 1px solid #4a90e2; /* Borde del botón */
+}
+
+button:hover {
+    background-color: #357abd; /* Azul más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Escala ligera al pasar el cursor */
+}
+
+@media (max-width: 600px) {
+    .formulario-contenedor {
+        padding: 20px;
+        width: 90%;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+

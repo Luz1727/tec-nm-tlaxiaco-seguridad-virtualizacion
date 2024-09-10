@@ -1,0 +1,104 @@
+/* style.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #5095ea, #3b84de); /* Degradado suave de azul a gris claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.formulario-contenedor {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h2 {
+    color: #333333; /* Color del texto del encabezado */
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #cccccc; /* Borde gris claro */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9; /* Fondo gris claro para campos de entrada */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #007bff; /* Borde azul claro al enfocar */
+    outline: none;
+}
+
+button {
+    background-color: #007bff; /* Fondo azul del botón */
+    color: #ffffff; /* Texto blanco del botón */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+}
+
+@media (max-width: 600px) {
+    .formulario-contenedor {
+        padding: 20px;
+        width: 90%;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+
+    /* Añadir al final del archivo style.css */
+
+.password-strength {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.password-strength.debil {
+    color: red;
+}
+
+.password-strength.moderada {
+    color: orange;
+}
+
+.password-strength.fuerte {
+    color: green;
+}
+
+
+
+
+}
+
+
+
